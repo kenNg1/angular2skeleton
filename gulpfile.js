@@ -82,8 +82,10 @@ gulp.task('sassBuild', function() {
 });
 
 ////////////////////// SERVER //////////////////////
-gulp.task('serve', ['build'], function() {
+
+gulp.task('serve', function() {
   browserSync.init({
+    browser: ["google chrome", "firefox"],
     server: {
       baseDir: "./",
       index: "index.html"
